@@ -6,11 +6,11 @@ let isAnimating = false; // Prevents repeated animations during a single click
 
 function getResponsiveMarginTopOFClassification() {
   if (window.innerWidth >= 1920) {
-    return "-380px"; // สำหรับหน้าจอ 1920px
-  } else if (window.innerWidth >= 1440) {
+    return "-480px"; // สำหรับหน้าจอ 1920px
+  } else if (window.innerWidth == 1440) {
     return "-320px"; // สำหรับหน้าจอ 1440px
   } else {
-    return "230px"; // ค่ามาตรฐานสำหรับหน้าจออื่นๆ
+    return "-377px"; // ค่ามาตรฐานสำหรับหน้าจออื่นๆ
   }
 }
 
