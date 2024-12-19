@@ -3,6 +3,7 @@ import "./css/Classification.css";
 import axios from "axios";
 import { setupClassificationAnimation } from "./JS/classification_Fun";
 
+
 function Classification() {
   const [mitreCounts, setMitreCounts] = useState([]);
   const [showToday, setShowToday] = useState(true);
@@ -16,11 +17,11 @@ function Classification() {
       console.error("Error fetching MITRE techniques data:", error);
     }
   };
-
+  
   useEffect(() => {
     const endpoint = showToday
-      ? "http://localhost:5000/api/today_mitre_techniques"
-      : "http://localhost:5000/api/mitre_techniques";
+      ? `${import.meta.env.VITE_REACT_APP_BASE_URL}/api/today_mitre_techniques`
+      : `${import.meta.env.VITE_REACT_APP_BASE_URL}/api/mitre_techniques`;
     fetchMitreTechniques(endpoint);
 
     const intervalId = setInterval(() => fetchMitreTechniques(endpoint), 5000);

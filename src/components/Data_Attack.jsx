@@ -40,8 +40,8 @@ function Data_Attack() {
     const fetchAttackers = async () => {
       try {
         const [latestResponse, mitreResponse] = await Promise.all([
-          axios.get("http://localhost:5000/api/latest_alert"),
-          axios.get("http://localhost:5000/api/mitre_alert"),
+          axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/latest_alert`),
+          axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/mitre_alert`),
         ]);
 
         const latestData = latestResponse.data || [];

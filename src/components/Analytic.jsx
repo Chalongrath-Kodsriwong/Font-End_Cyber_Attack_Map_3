@@ -3,6 +3,7 @@ import Chart from "react-apexcharts";
 import "../components/css/analytic.css";
 import axios from "axios";
 
+
 const Dashboard = () => {
   const [topIncidents, setTopIncidents] = useState([]);
 
@@ -130,7 +131,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchEndpointData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5000/api/top-mitre-techniques"); // Replace with your API endpoint
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/top-mitre-techniques`); // Replace with your API endpoint
         const data = response.data;
   
         // Extract labels (techniques) and series data (counts)
@@ -165,7 +166,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchSeverityData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5000/api/top-agents"); // Replace with your actual API endpoint
+        const response = await axios.get(`${REACT_APP_import.meta.env.VITE_REACT_APP_BASE_URL}/api/top-agents`); // Replace with your actual API endpoint
         const data = response.data;
   
         // Assuming the API returns data in this format:
@@ -209,7 +210,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchMitreData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5000/api/top-countries"); // Replace with your API endpoint
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/top-countries`); // Replace with your API endpoint
         const data = response.data;
   
         // Extract categories (countries) and series data (counts)
@@ -246,7 +247,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchIncidentData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5000/api/top-techniques"); // URL ของ API
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/top-techniques`); // URL ของ API
         const data = response.data;
   
         // แปลงข้อมูลจาก API ให้อยู่ในรูปแบบที่ ApexCharts รองรับ
@@ -283,7 +284,7 @@ const Dashboard = () => {
   const fetchRealTimeData = async () => {
     try {
       // Fetch data from API
-      const response = await fetch("http://127.0.0.1:5000/api/peak-attack-periods");
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/peak-attack-periods`);
       const data = await response.json();
   
       // Get current time in Thailand (GMT+7)
@@ -322,7 +323,7 @@ const Dashboard = () => {
   const fetchTopIncidents = async () => {
     try {
       // Fetch data from API
-      const response = await fetch("http://127.0.0.1:5000/api/vulnerabilities"); // Replace with your API URL
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/vulnerabilities`); // Replace with your API URL
       const data = await response.json();
   
       // Format the data to match the required structure

@@ -12,7 +12,7 @@ function Count_Attack() {
     // ฟังก์ชันดึงข้อมูลการโจมตีของวันนี้ทั้งหมด
     const fetchTodayAttacks = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/today-attacks");
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/today-attacks`);
         const totalToday = response.data.reduce((sum, item) => sum + item.count, 0); // รวมจำนวนการโจมตีวันนี้
         setTodayAttacks(totalToday);
       } catch (error) {
@@ -23,7 +23,7 @@ function Count_Attack() {
     // ฟังก์ชันดึงข้อมูลการโจมตีทั้งหมด
     const fetchTotalAttacks = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/top-countries");
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/top-countries`);
         const total = response.data.reduce((sum, item) => sum + item.count, 0); // รวมจำนวนการโจมตีทั้งหมด
         setTotalAttacks(total);
       } catch (error) {

@@ -189,9 +189,10 @@ const Map = () => {
 
     const fetchAttackData = async () => {
       try {
+        // const BASE_URL = process.env.REACT_APP_BASE_URL;
         const [latestResponse, mitreResponse] = await Promise.all([
-          fetch("http://localhost:5000/api/latest_alert"),
-          fetch("http://localhost:5000/api/mitre_alert"),
+          fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/latest_alert`),
+          fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/mitre_alert`),
         ]);
 
         if (!latestResponse.ok || !mitreResponse.ok) {

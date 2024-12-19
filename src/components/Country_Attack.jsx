@@ -201,7 +201,7 @@ function Country_Attack() {
 
   const fetchCountries = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/api/today-attacks");
+      const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/today-attacks`);
       const data = response.data;
 
       const formattedCountries = data.map((item) => ({

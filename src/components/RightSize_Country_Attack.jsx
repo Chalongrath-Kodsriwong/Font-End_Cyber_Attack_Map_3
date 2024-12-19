@@ -21,7 +21,7 @@ function RightSize_Country_Attack() {
     try {
       // Fetch top countries data
       const response = await axios.get(
-        "http://127.0.0.1:5000/api/today-attacks"
+        `${import.meta.env.VITE_REACT_APP_BASE_URL}/api/today-attacks`
       ); // Replace with your API URL
       const data = response.data;
 
