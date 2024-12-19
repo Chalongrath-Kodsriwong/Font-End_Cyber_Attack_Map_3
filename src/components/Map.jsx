@@ -40,7 +40,7 @@ const Map = () => {
     "pure-ftpd: Multiple connection attempts from same source.": "#12CAD6", // สีฟ้าสดใส
     "pure-ftpd: FTP Authentication success.": "#0FABBC", // สีฟ้าสว่าง
     "Query cache denied (probably config error).": "#5628B4", // สีม่วงเข้ม
-    "Simple shell.php command execution.": "#204969", // สีน้ำเงินเข้้ม
+    "Simple shell.php command execution.": "#204969", // สีน้ำเงินเข้ม
     "SQL injection attempt.": "#A4F6A5", // สีเขียวอ่อน
     "sshd Attempt to login using a non-existent user": "#FF0000", // สีแดง
     "Dovecot Authentication Success.": "#15F5BA", // สีเขียว
@@ -230,7 +230,7 @@ const Map = () => {
 
     fetchAttackData();
 
-    const intervalId = setInterval(fetchAttackData, 1000); // Fetch data every second
+    const intervalId = setInterval(fetchAttackData, 500); // Fetch data every second
 
     return () => clearInterval(intervalId); // Cleanup interval
   }, []);

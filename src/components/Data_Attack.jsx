@@ -8,8 +8,7 @@ const attackTypeColors = {
   "Web server 400 error code.": "#DCFFB7", // สีเหลือง
   "CMS (WordPress or Joomla) login attempt.": "#00DFA2", // สีเขียว
   "Botnet Activity Detected and Blocked": "#FF204E", // สีแดงเข้ม
-  "High amount of POST requests in a small period of time (likely bot).":
-    "#FF8D29", // สีส้ม
+  "High amount of POST requests in a small period of time (likely bot).":"#FF8D29", // สีส้ม
   "Multiple web server 400 error codes from same source ip.": "#F35588", // สีชมพู
   "WAF Alert: Request Blocked.": "#C2FFD9", // สีมิ้น
   "pure-ftpd: Multiple connection attempts from same source.": "#12CAD6", // สีฟ้าสดใส
