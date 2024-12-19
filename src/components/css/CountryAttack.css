@@ -65,7 +65,7 @@
   text-align: center;
   width: 150px;
   height: 80px;
-  margin-top: 130px;
+  margin: 130px auto;
   border-radius: 0px 5px 5px 0px;
   cursor: pointer;
   background-color: rgba(12, 50, 68, 0.643);
@@ -78,9 +78,9 @@
   transform: rotate(90deg);
 }
 
-.TextCountry {
+/* .TextCountry {
   transform: rotate(90deg);
-}
+} */
 
 .btn_hideShow:hover {
   background-color: #1c1c1c;

@@ -4,16 +4,28 @@ import $ from 'jquery';
 let isHidden = true; // Tracks visibility of container-item
 let isAnimating = false; // Prevents repeated animations during a single click
 
+function getResponsiveMarginTopOFClassification() {
+  if (window.innerWidth >= 1920) {
+    return "-380px"; // สำหรับหน้าจอ 1920px
+  } else if (window.innerWidth >= 1440) {
+    return "-380px"; // สำหรับหน้าจอ 1440px
+  } else {
+    return "230px"; // ค่ามาตรฐานสำหรับหน้าจออื่นๆ
+  }
+}
+
 export const setupCountryAttackAnimation = () => {
   $(".btn_hideShow").click(function () {
     if (isAnimating) return; // Prevent additional clicks during animation
     isAnimating = true;
 
+    const marginLeftValue = getResponsiveMarginTopOFClassification();
+
     if (isHidden) {
       // Hide container-item and move Classification down
       $(".leftsize").animate(
         {
-          marginLeft: "-320px",
+          marginLeft: marginLeftValue,
         //   opacity: 1,
         },
         100,
@@ -21,6 +33,9 @@ export const setupCountryAttackAnimation = () => {
           isAnimating = false; // Allow new animation after completion
         }
       );
+      $(".btn_hideShow").css({
+        outline: "1px solid white"
+      });
       $(".btn_hideShow").mouseenter(function () { 
         $(".Arrow3").css({
           display: "inline",
@@ -47,6 +62,9 @@ export const setupCountryAttackAnimation = () => {
           isAnimating = false; // Allow new animation after completion
         }
       );
+      $(".btn_hideShow").css({
+        outline: "1px solid #1c1c1c"
+      });
       $(".btn_hideShow").mouseenter(function () { 
         $(".Arrow3").css({
           display: "inline",
