@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../components/css/RightSize_Country_Attack.css"
+import "../components/css/RightSize_Country_Attack.css";
+import "../components/JS/CountryAttack2_Fun.js";
+import { setupCountryAttack2Animation } from "../components/JS/CountryAttack2_Fun.js"
 import axios from "axios";
 
 // Map country names to image paths
@@ -46,6 +48,10 @@ function RightSize_Country_Attack() {
     }, 1000); // 60 seconds interval
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, []);
+
+  useEffect (() => {
+    setupCountryAttack2Animation();
   }, []);
 
   return (

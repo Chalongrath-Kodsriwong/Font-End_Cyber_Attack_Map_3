@@ -15,6 +15,18 @@ html, body {
   height: 100%;
 }
 
+/* ป้องกันการเลื่อนเฉพาะหน้า main_page */
+.main-lock {
+  overflow: hidden; /* ล็อคไม่ให้เลื่อน */
+  height: 100%; /* ล็อคความสูง */
+}
+
+/* อนุญาตให้หน้าอื่นเลื่อนขึ้นลงได้ */
+.App {
+  overflow-y: auto; /* อนุญาตให้เลื่อนในแนวตั้ง */
+  height: auto; /* ใช้ความสูงตามเนื้อหา */
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -26,7 +38,7 @@ html, body {
 .Map {
   position: relative;
   z-index: 1;
-  height: 62vh;
+  height: 60vh;
 }
 
 .container_bottom {
@@ -47,19 +59,16 @@ html, body {
   position: relative;
 }
 
-.rightsize {
-  /* background-color: rgba(21, 24, 45, 0.652); */
+/* .rightsize {
   display: flex;
   flex-direction: row;
   gap: 0px;
   width: 25rem;
   z-index: 2;
   position: absolute;
-  right: 5rem;
-  /* Enable scroll if content overflows */
-  /* overflow-y: auto;  */
+  right: 0rem;
   overflow-x: 100px;
-}
+} */
 
 .leftsize{
   display: flex;
@@ -68,7 +77,6 @@ html, body {
   margin-top: 1px;
   z-index: 1;
   width: 28rem;
-  /* border: 1px solid red; */
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -113,6 +121,12 @@ html, body {
     width: 20rem;
     /* border: 1px solid red; */
     border-radius: 0px 10px 10px 0px;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
   }
 }
 

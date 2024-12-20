@@ -6,16 +6,16 @@ let isAnimating = false; // Prevents repeated animations during a single click
 
 function getResponsiveMarginTopOFClassification() {
   if (window.innerWidth >= 1920) {
-    return "-380px"; // สำหรับหน้าจอ 1920px
+    return "-480px"; // สำหรับหน้าจอ 1920px
   } else if (window.innerWidth == 1440) {
     return "-320px"; // สำหรับหน้าจอ 1440px
   } else {
-    return "-380px"; // ค่ามาตรฐานสำหรับหน้าจออื่นๆ
+    return "-377px"; // ค่ามาตรฐานสำหรับหน้าจออื่นๆ
   }
 }
 
-export const setupCountryAttackAnimation = () => {
-  $(".btn_hideShow").click(function () {
+export const setupCountryAttack2Animation = () => {
+  $(".btn_hideShow2").click(function () {
     if (isAnimating) return; // Prevent additional clicks during animation
     isAnimating = true;
 
@@ -23,9 +23,9 @@ export const setupCountryAttackAnimation = () => {
 
     if (isHidden) {
       // Hide container-item and move Classification down
-      $(".leftsize").animate(
+      $(".rightsize").animate(
         {
-          marginLeft: marginLeftValue,
+          marginRight: "-377px",
         //   opacity: 1,
         },
         100,
@@ -33,28 +33,28 @@ export const setupCountryAttackAnimation = () => {
           isAnimating = false; // Allow new animation after completion
         }
       );
-      $(".btn_hideShow").css({
+      $(".btn_hideShow2").css({
         outline: "1px solid white"
       });
-      $(".btn_hideShow").mouseenter(function () { 
-        $(".Arrow3").css({
+      $(".btn_hideShow2").mouseenter(function () { 
+        $(".Arrow2").css({
           display: "inline",
           transform: "rotate(-90deg)",
           opacity: "1",
           color: "#00bcd4"
         })
       });
-      $(".btn_hideShow").mouseleave(function () { 
-        $(".Arrow3").css({
+      $(".btn_hideShow2").mouseleave(function () { 
+        $(".Arrow2").css({
           display: "none",
           opacity: "0"
         })
       });
     } else {
       // Show container-item and move Classification up
-      $(".leftsize").animate(
+      $(".rightsize").animate(
         {
-            marginLeft: "0px",
+            marginRight: "0px",
             // opacity: 1,
         },
         100,
@@ -62,19 +62,19 @@ export const setupCountryAttackAnimation = () => {
           isAnimating = false; // Allow new animation after completion
         }
       );
-      $(".btn_hideShow").css({
+      $(".btn_hideShow2").css({
         outline: "1px solid #1c1c1c"
       });
-      $(".btn_hideShow").mouseenter(function () { 
-        $(".Arrow3").css({
+      $(".btn_hideShow2").mouseenter(function () { 
+        $(".Arrow2").css({
           display: "inline",
           transform: "rotate(90deg)",
           opacity: "1",
           color: "#00bcd4"
         })
       });
-      $(".btn_hideShow").mouseleave(function () { 
-        $(".Arrow3").css({
+      $(".btn_hideShow2").mouseleave(function () { 
+        $(".Arrow2").css({
           display: "none",
           opacity: "0"
         })
