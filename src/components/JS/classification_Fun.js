@@ -15,7 +15,7 @@ function getResponsiveMarginTopOFClassification() {
   } else if (width > 1920 && width <= 2200) {
     return "280px"; // สำหรับหน้าจอ 1921px ถึง 2200px
   } else if (width >= 1800 && width < 1920) {
-    return "250px"; // สำหรับหน้าจอ 1800px ถึง 1919px
+    return "230px"; // สำหรับหน้าจอ 1800px ถึง 1919px
   } else if (width >= 1700 && width < 1800) {
     return "235px"; // สำหรับหน้าจอ 1700px ถึง 1799px
   } else if (width >= 1600 && width < 1700) {

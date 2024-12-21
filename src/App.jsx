@@ -25,36 +25,35 @@ function AppWrapper() {
 
   return (
     <div className={`App ${location.pathname === "/" ? "main-lock" : ""}`}>
-      <Navbar />
-      <Routes>
-        {/* เส้นทางสำหรับหน้าแรก */}
-        <Route
-          path="/"
-          element={
-            <div className="main_page">
-              <div className="container">
-                <div className="Map">
-                  <Map />
-                </div>
-                <div className="leftsize">
-                  <Country_Attack />
-                </div>
-                <div className="container_bottom">
-                  <div className="bottom_left">
-                    <Classification />
-                  </div>
-                  <div className="bottom_right">
-                    <Data_Attack />
-                  </div>
-                </div>
+  <Navbar />
+  <Routes>
+    <Route
+      path="/"
+      element={
+        <div className="main_page">
+          <div className="container">
+            <div className="Map">
+              <Map />
+            </div>
+            <div className="leftsize">
+              <Country_Attack />
+            </div>
+            <div className="container_bottom">
+              <div className="bottom_left">
+                <Classification />
+              </div>
+              <div className="bottom_right">
+                <Data_Attack />
               </div>
             </div>
-          }
-        />
-        {/* ตั้งเส้นทางที่ตรงกับ /Analytic ไปยังหน้า Analytic */}
-        <Route path="/Analytic" element={<Analytic />} />
-      </Routes>
-    </div>
+          </div>
+        </div>
+      }
+    />
+    <Route path="/Analytic" element={<Analytic />} />
+  </Routes>
+</div>
+
   );
 }
 

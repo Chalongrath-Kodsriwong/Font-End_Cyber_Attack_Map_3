@@ -13,15 +13,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 15px 30px; */
   padding: 0px 20px;
   background: linear-gradient(90deg, #1B213B, #263859);
-
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 1000; /* Ensures it stays above other content */
+  height: 60px; /* Fixed height for consistency */
 }
 
 /* Logo Section */
