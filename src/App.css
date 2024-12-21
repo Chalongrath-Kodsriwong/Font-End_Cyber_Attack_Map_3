@@ -39,12 +39,14 @@ html, body {
   position: relative;
   z-index: 1;
   height: 60vh;
+  /* outline: 1px solid red; */
 }
 
 .container_bottom {
   display: flex;
   gap: 1px;
   width: 100%;
+  height: 40%;
   overflow: hidden;
 }
 
@@ -87,6 +89,14 @@ html, body {
     width: 20rem;
   }
 } */
+
+@media screen and (min-width: 1920px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
 
 @media screen and (max-width: 1440px) {
   .container {

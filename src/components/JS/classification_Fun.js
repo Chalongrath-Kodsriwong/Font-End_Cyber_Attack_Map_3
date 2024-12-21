@@ -13,7 +13,7 @@ function getResponsiveMarginTopOFClassification() {
   } else if (width > 2200 && width <= 2400) {
     return "330px"; // สำหรับหน้าจอ 2201px ถึง 2400px
   } else if (width > 1920 && width <= 2200) {
-    return "290px"; // สำหรับหน้าจอ 1921px ถึง 2200px
+    return "280px"; // สำหรับหน้าจอ 1921px ถึง 2200px
   } else if (width >= 1800 && width < 1920) {
     return "250px"; // สำหรับหน้าจอ 1800px ถึง 1919px
   } else if (width >= 1700 && width < 1800) {
@@ -29,7 +29,7 @@ function getResponsiveMarginTopOFClassification() {
   } else if (width >= 480 && width < 768) {
     return "30px"; // สำหรับหน้าจอมือถือขนาดกลาง 480px ถึง 767px
   } else {
-    return "260px"; // สำหรับหน้าจอขนาดเล็กกว่า 480px
+    return "250px"; // สำหรับหน้าจอขนาดเล็กกว่า 480px
   }
 }
 
@@ -83,9 +83,9 @@ export const setupClassificationAnimation = () => {
 
     if (isHidden) {
       // Hide container-item and move Classification down
-      // $(".Classification").css({
-      //   outline: color_respon
-      // })
+      $(".Classification").css({
+        outline: color_respon
+      })
       $(".container-item").animate(
         {
           marginBottom: "-100px",
@@ -106,9 +106,9 @@ export const setupClassificationAnimation = () => {
         transform: "rotate(-180deg)",
       });
     } else {
-      // $(".Classification").css({
-      //   outline: color_respon
-      // })
+      $(".Classification").css({
+        outline: color_respon
+      })
       // Show container-item and move Classification up
       $(".container-item").animate(
         {
